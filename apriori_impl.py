@@ -1,18 +1,27 @@
 import itertools
 
-allitems = ['beef', 'cheese', 'chicken', 'clothes', 'milk', 'boots']
+# allitems = ['beef', 'cheese', 'chicken', 'clothes', 'milk', 'boots']
+#
+# t1 = ['beef', 'chicken', 'milk']
+# t2 = ['beef', 'cheese']
+# t3 = ['cheese', 'boots']
+# t4 = ['beef', 'cheese', 'chicken']
+# t5 = ['beef', 'cheese', 'chicken', 'clothes', 'milk']
+# t6 = ['chicken', 'clothes', 'milk']
+# t7 = ['chicken', 'milk', 'clothes']
+#
+# tall = [t1, t2, t3, t4, t5, t6, t7]
 
-t1 = ['beef', 'chicken', 'milk']
-t2 = ['beef', 'cheese']
-t3 = ['cheese', 'boots']
-t4 = ['beef', 'cheese', 'chicken']
-t5 = ['beef', 'cheese', 'chicken', 'clothes', 'milk']
-t6 = ['chicken', 'clothes', 'milk']
-t7 = ['chicken', 'milk', 'clothes']
 
-tall = [t1, t2, t3, t4, t5, t6, t7]
+allitems = [1, 2, 3, 4, 5]
+t1 = [1, 3, 4]
+t2 = [2, 3, 5]
+t3 = [1, 2, 3, 5]
+t4 = [2, 5]
 
-minsup = 3
+tall = [t1, t2, t3, t4]
+
+minsup = 2
 
 
 
@@ -97,4 +106,4 @@ def apriori(T, minsup):
         globalFreqs.append(fkmin1)
     return globalFreqs
 
-apriori(tall, 3)
+apriori(tall, minsup)
